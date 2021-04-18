@@ -17,7 +17,7 @@
 
 #include <X11/Xlib.h>
 
-char *tzargentina = "America/Buenos_Aires";
+char *tzdublin = "Europe/Dublin";
 char *tzutc = "UTC";
 char *tzberlin = "Europe/Berlin";
 
@@ -196,7 +196,7 @@ main(void)
 		avgs = loadavg();
 		bat = getbattery("/sys/class/power_supply/BAT0");
 		bat1 = getbattery("/sys/class/power_supply/BAT1");
-		tmar = mktimes("%H:%M", tzargentina);
+		tmar = mktimes("%H:%M", tzdublin);
 		tmutc = mktimes("%H:%M", tzutc);
 		tmbln = mktimes("KW %W %a %d %b %H:%M %Z %Y", tzberlin);
 		t0 = gettemperature("/sys/devices/virtual/hwmon/hwmon0", "temp1_input");
